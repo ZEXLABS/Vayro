@@ -1,11 +1,35 @@
 import { Vehicle } from '../types';
+import heroCarImg from '../assets/images/hero_executive_car_1790215163008.jpg';
+import convoyImg from '../assets/images/security_convoy_mobility_1790215175523.jpg';
+import yachtImg from '../assets/images/luxury_yacht_charter_1790215186384.jpg';
+import coachImg from '../assets/images/executive_coach_bus_1790215197755.jpg';
 
-// Real generated visual assets
+// Bundled visual assets with public fallback
 export const IMAGES = {
-  heroCar: '/src/assets/images/hero_executive_car_1790215163008.jpg',
-  convoy: '/src/assets/images/security_convoy_mobility_1790215175523.jpg',
-  yacht: '/src/assets/images/luxury_yacht_charter_1790215186384.jpg',
-  coach: '/src/assets/images/executive_coach_bus_1790215197755.jpg',
+  heroCar: heroCarImg || '/images/hero_executive_car_1790215163008.jpg',
+  convoy: convoyImg || '/images/security_convoy_mobility_1790215175523.jpg',
+  yacht: yachtImg || '/images/luxury_yacht_charter_1790215186384.jpg',
+  coach: coachImg || '/images/executive_coach_bus_1790215197755.jpg',
+};
+
+// Premium verified automotive image URLs with high availability
+const FLEET_PHOTOS = {
+  sClass1: 'https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?q=80&w=1600&auto=format&fit=crop',
+  sClass2: 'https://images.unsplash.com/photo-1617788138017-80ad40651399?q=80&w=1600&auto=format&fit=crop',
+  landCruiser1: 'https://images.unsplash.com/photo-1594502184342-2e12f877aa73?q=80&w=1600&auto=format&fit=crop',
+  landCruiser2: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?q=80&w=1600&auto=format&fit=crop',
+  vClass1: 'https://images.unsplash.com/photo-1549399542-7e3f8b79c341?q=80&w=1600&auto=format&fit=crop',
+  vClass2: coachImg,
+  rangeRover1: 'https://images.unsplash.com/photo-1606016159991-dfe4f2746ad5?q=80&w=1600&auto=format&fit=crop',
+  rangeRover2: 'https://images.unsplash.com/photo-1563720223185-11003d516935?q=80&w=1600&auto=format&fit=crop',
+  bmw7Series1: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?q=80&w=1600&auto=format&fit=crop',
+  bmw7Series2: 'https://images.unsplash.com/photo-1523983388277-336a66bf9bcd?q=80&w=1600&auto=format&fit=crop',
+  lexusLx1: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1600&auto=format&fit=crop',
+  lexusLx2: convoyImg,
+  yacht1: yachtImg,
+  yacht2: 'https://images.unsplash.com/photo-1569263979104-865ab7cd8d17?q=80&w=1600&auto=format&fit=crop',
+  coach1: coachImg,
+  coach2: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=1600&auto=format&fit=crop',
 };
 
 export const MOCK_VEHICLES: Vehicle[] = [
@@ -28,8 +52,9 @@ export const MOCK_VEHICLES: Vehicle[] = [
     chauffeurAvailable: true,
     securityTrainedDriver: true,
     images: [
+      FLEET_PHOTOS.sClass1,
+      FLEET_PHOTOS.sClass2,
       IMAGES.heroCar,
-      IMAGES.convoy,
     ],
     description: 'The benchmark of executive mobility. Quiet, refined, and engineered for high-level business movements and discrete executive travel.',
     features: [
@@ -66,8 +91,9 @@ export const MOCK_VEHICLES: Vehicle[] = [
     chauffeurAvailable: true,
     securityTrainedDriver: true,
     images: [
+      FLEET_PHOTOS.landCruiser1,
+      FLEET_PHOTOS.landCruiser2,
       IMAGES.convoy,
-      IMAGES.heroCar,
     ],
     description: 'Uncompromising road presence with supreme all-terrain capability. Built for inter-state executive travels, escort movements, and VIP transit.',
     features: [
@@ -104,7 +130,8 @@ export const MOCK_VEHICLES: Vehicle[] = [
     chauffeurAvailable: true,
     securityTrainedDriver: false,
     images: [
-      IMAGES.coach,
+      FLEET_PHOTOS.vClass1,
+      FLEET_PHOTOS.vClass2,
       IMAGES.heroCar,
     ],
     description: 'Mobile boardroom on wheels. Features conference-style face-to-face seating, work tables, and generous luggage capacity for delegations.',
@@ -142,8 +169,9 @@ export const MOCK_VEHICLES: Vehicle[] = [
     chauffeurAvailable: true,
     securityTrainedDriver: true,
     images: [
+      FLEET_PHOTOS.rangeRover1,
+      FLEET_PHOTOS.rangeRover2,
       IMAGES.heroCar,
-      IMAGES.convoy,
     ],
     description: 'The pinnacle of luxury SUV mobility. Peerless comfort, whisper-quiet cabin acoustics, and effortless poise for premier executive arrivals.',
     features: [
@@ -180,8 +208,9 @@ export const MOCK_VEHICLES: Vehicle[] = [
     chauffeurAvailable: true,
     securityTrainedDriver: true,
     images: [
+      FLEET_PHOTOS.bmw7Series1,
+      FLEET_PHOTOS.bmw7Series2,
       IMAGES.heroCar,
-      IMAGES.coach,
     ],
     description: 'Imposing presence with state-of-the-art rear theater experience. Ideal for VIP summit transportation and visiting diplomatic dignitaries.',
     features: [
@@ -218,8 +247,9 @@ export const MOCK_VEHICLES: Vehicle[] = [
     chauffeurAvailable: true,
     securityTrainedDriver: true,
     images: [
+      FLEET_PHOTOS.lexusLx1,
+      FLEET_PHOTOS.lexusLx2,
       IMAGES.convoy,
-      IMAGES.heroCar,
     ],
     description: 'Dedicated 4-seat Ultra Luxury configuration with independent rear captain chairs that recline up to 48 degrees with footrest.',
     features: [
@@ -259,7 +289,8 @@ export const MOCK_YACHTS: Vehicle[] = [
     chauffeurAvailable: true, // Captain & Crew included
     securityTrainedDriver: true,
     images: [
-      IMAGES.yacht,
+      FLEET_PHOTOS.yacht1,
+      FLEET_PHOTOS.yacht2,
     ],
     description: 'Private 68-foot luxury motor yacht experience for executive leisure, private celebrations, corporate hospitality, and tranquil coastal movements.',
     features: [
@@ -295,7 +326,8 @@ export const MOCK_YACHTS: Vehicle[] = [
     chauffeurAvailable: true,
     securityTrainedDriver: false,
     images: [
-      IMAGES.yacht,
+      FLEET_PHOTOS.yacht2,
+      FLEET_PHOTOS.yacht1,
     ],
     description: 'High-speed coastal express cruiser ideal for corporate sunset cruises, intimate meetings, and coastal transit around Lagos waterways.',
     features: [
@@ -334,7 +366,8 @@ export const MOCK_BUSES: Vehicle[] = [
     chauffeurAvailable: true,
     securityTrainedDriver: true,
     images: [
-      IMAGES.coach,
+      FLEET_PHOTOS.coach1,
+      FLEET_PHOTOS.coach2,
     ],
     description: 'Full-size 49-passenger executive touring coach for large international delegations, corporate retreats, conferences, and organized group movements.',
     features: [
@@ -370,7 +403,8 @@ export const MOCK_BUSES: Vehicle[] = [
     chauffeurAvailable: true,
     securityTrainedDriver: true,
     images: [
-      IMAGES.coach,
+      FLEET_PHOTOS.coach2,
+      FLEET_PHOTOS.coach1,
     ],
     description: 'Spacious 32-seat custom executive configuration with expanded legroom, center tables, and discrete tinted windows for high-ranking delegations.',
     features: [
@@ -406,8 +440,8 @@ export const MOCK_BUSES: Vehicle[] = [
     chauffeurAvailable: true,
     securityTrainedDriver: true,
     images: [
-      IMAGES.coach,
-      IMAGES.heroCar,
+      FLEET_PHOTOS.coach1,
+      FLEET_PHOTOS.vClass1,
     ],
     description: 'Compact executive coach built for swift city transfers, airport delegations, and mid-sized corporate executive movements.',
     features: [
