@@ -1,0 +1,6 @@
+{
+  "name": "VAYRO — Premium Mobility, Rentals & Executive Transport",
+  "description": "VAYRO provides premium cars, yachts, buses, executive transportation, vehicle leasing, and security mobility solutions. Discover, reserve, and move with confidence.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
